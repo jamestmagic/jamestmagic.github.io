@@ -108,7 +108,7 @@ function shuffle(type0, type1, type2) {
             "type0").value == "Support") {
         document.getElementById("type2").value = "Any";
         document.getElementById("supportError").innerHTML =
-            "Cannot have 3 Support Legends";
+            "Cannot have 3 Support Legends. Please choose another type.";
     } else {
         document.getElementById("supportError").innerHTML = "";
     }
