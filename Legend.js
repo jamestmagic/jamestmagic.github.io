@@ -13,6 +13,10 @@ class Legend {
     }
 }
 
+var bgFiles = ["skulltown.png", "fragment.png", "hammond.png"]
+var bgFileName = bgFiles[Math.floor(Math.random()*bgFiles.length)];
+document.getElementById("bg").style.backgroundImage="url(" + bgFileName + ")";
+
 
 //All Legends and their atributes
 var bloodhound = new Legend(0, "Bloodhound", "Recon", "Bloodhound.png");
