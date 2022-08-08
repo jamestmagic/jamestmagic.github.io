@@ -1,3 +1,4 @@
+//Legend Class
 class Legend {
     #value = 0;
     #name = null;
@@ -13,7 +14,7 @@ class Legend {
 }
 
 
-
+//All Legends and their atributes
 var bloodhound = new Legend(0, "Bloodhound", "Recon", "Bloodhound.png");
 
 var gibraltar = new Legend(1, "Gibraltar", "Defensive", "Gibraltar.png");
@@ -58,6 +59,7 @@ var newCastle = new Legend(20, "New Castle", "Defensive", "New Castle.png");
 
 var vantage = new Legend(21, "Vantage", "Recon", "Vantage.png");
 
+//Legend Array
 const roster = [bloodhound, gibraltar, lifeline, pathfinder, wraith, bangalore,
     caustic, mirage,
     octane, wattson, crypt0, revenant, loba, rampart, horizon, fuse,
@@ -65,6 +67,7 @@ const roster = [bloodhound, gibraltar, lifeline, pathfinder, wraith, bangalore,
     vantage
 ];
 
+//Generate Button functionality
 const generateButton = document.getElementById('generateButton')
 generateButton.addEventListener("click", function() {
     shuffle();
@@ -77,9 +80,9 @@ generateButton.addEventListener('keypress', (event) => {
 });
 
 
-
+//Main funtion to create composition
 function shuffle(type0, type1, type2) {
-    document.getElementById("generateButton").focus();
+    //shuffles current roster
     for (let i = 0; i < roster.length; i++) {
         var j = Math.floor(Math.random() * roster.length);
         var temp = roster[i];
@@ -87,12 +90,9 @@ function shuffle(type0, type1, type2) {
         roster[j] = temp;
     }
 
-    for (let i = 0; i < roster.length; i++) {
-        console.log("" + i + ". " + roster[i].name + roster[i].value);
-    }
 
 
-
+    //Access drop down lists from index.html
     var typeList0 = document.getElementById("typeList0");
     document.getElementById("type0").value = typeList0.options[typeList0
         .selectedIndex].text;
@@ -103,6 +103,10 @@ function shuffle(type0, type1, type2) {
     document.getElementById("type2").value = typeList2.options[typeList2
         .selectedIndex].text;
 
+    /*If the user has selected support for all 3 types, show a warning
+      Last legend type will default to "Any"
+      This code will be deleted once Respawn adds another Support Legend
+      */
     if (document.getElementById("type2").value == "Support" && document
         .getElementById("type1").value == "Support" && document.getElementById(
             "type0").value == "Support") {
@@ -113,12 +117,13 @@ function shuffle(type0, type1, type2) {
         document.getElementById("supportError").innerHTML = "";
     }
 
+    //determines which types will be used for each Legend slot
     type0 = document.getElementById("type0").value;
     type1 = document.getElementById("type1").value;
     type2 = document.getElementById("type2").value;
 
 
-
+    //new array for the randomized legends
     var randomLegends = [roster[0], roster[1], roster[2]];
 
 
@@ -150,7 +155,7 @@ function shuffle(type0, type1, type2) {
             break;
         }
     }
-
+    //Legend 3
     for (let i = 0; i < roster.length; i++) {
         if (type2 == "Any" && roster[i].name != randomLegends[0].name && roster[
                 i].name != randomLegends[1].name) {
@@ -166,6 +171,7 @@ function shuffle(type0, type1, type2) {
         }
     }
 
+    //update index.html with filenames, types, and names of generated comp
     document.getElementById("legend0").src = "Legends/" + randomLegends[0]
         .fileName;
     document.getElementById("legend1").src = "Legends/" + randomLegends[1]
@@ -188,8 +194,4 @@ function shuffle(type0, type1, type2) {
     document.getElementById("legend2Name").innerHTML = randomLegends[2].name
         .toUpperCase();
 
-
-
-    //document.getElementById("legend1Name").innerHTML = randomLegends[1].name;
-    document.getElementById("generateButton").focus();
 }
