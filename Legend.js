@@ -15,7 +15,7 @@ class Legend {
 
 var bgFiles = ["skulltown.png", "fragment.png", "hammond.png"]
 var bgFileName = bgFiles[Math.floor(Math.random() * bgFiles.length)];
-document.getElementById("bg").style.backgroundImage = "url(" + bgFileName + ")";
+document.getElementById("bg").style.backgroundImage = "url(Backgrounds/" + bgFileName + ")";
 
 
 //All Legends and their atributes
@@ -83,6 +83,11 @@ generateButton.addEventListener('keypress', (event) => {
     shuffle();
 });
 
+const webBody = document.getElementById('bg');
+webBody.addEventListener('keypress', (event) => {
+  if (event.code == "Space")
+    shuffle();
+});
 
 //Main funtion to create composition
 function shuffle(type0, type1, type2) {
