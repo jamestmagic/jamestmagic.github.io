@@ -27,37 +27,37 @@ var lifeline = new Legend(2, "Lifeline", "Support", "Lifeline.png");
 
 var pathfinder = new Legend(3, "Pathfinder", "Recon", "Pathfinder.png");
 
-var wraith = new Legend(4, "Wraith", "Offensive", "Wraith.png");
+var wraith = new Legend(4, "Wraith", "Assault", "Wraith.png");
 
-var bangalore = new Legend(5, "Bangalore", "Offensive", "Bangalore.png");
+var bangalore = new Legend(5, "Bangalore", "Assault", "Bangalore.png");
 
 var caustic = new Legend(6, "Caustic", "Defensive", "Caustic.png");
 
-var mirage = new Legend(7, "Mirage", "Offensive", "Mirage.png");
+var mirage = new Legend(7, "Mirage", "Assault", "Mirage.png");
 
-var octane = new Legend(8, "Octane", "Offensive", "Octane.png");
+var octane = new Legend(8, "Octane", "Assault", "Octane.png");
 
 var wattson = new Legend(9, "Wattson", "Defensive", "Wattson.png");
 
 var crypt0 = new Legend(10, "Crypto", "Recon", "Crypto.png");
 
-var revenant = new Legend(11, "Revenant", "Offensive", "Revenant.png");
+var revenant = new Legend(11, "Revenant", "Assault", "Revenant.png");
 
 var loba = new Legend(12, "Loba", "Support", "Loba.png");
 
 var rampart = new Legend(13, "Rampart", "Defensive", "Rampart.png");
 
-var horizon = new Legend(14, "Horizon", "Offensive", "Horizon.png");
+var horizon = new Legend(14, "Horizon", "Assault", "Horizon.png");
 
-var fuse = new Legend(15, "Fuse", "Offensive", "Fuse.png");
+var fuse = new Legend(15, "Fuse", "Assault", "Fuse.png");
 
-var valkyrie = new Legend(16, "Valkyrie", "Offensive", "Valkyrie.png");
+var valkyrie = new Legend(16, "Valkyrie", "Assault", "Valkyrie.png");
 
 var seer = new Legend(17, "Seer", "Recon", "Seer.png");
 
-var ash = new Legend(18, "Ash", "Offensive", "Ash.png");
+var ash = new Legend(18, "Ash", "Assault", "Ash.png");
 
-var madMaggie = new Legend(19, "Mad Maggie", "Offensive", "Mad Maggie.png");
+var madMaggie = new Legend(19, "Mad Maggie", "Assault", "Mad Maggie.png");
 
 var newCastle = new Legend(20, "New Castle", "Defensive", "New Castle.png");
 
