@@ -72,7 +72,7 @@ var horizon = new Legend(14, "Horizon", "Assault", "Horizon.png");
 
 var fuse = new Legend(15, "Fuse", "Assault", "Fuse.png");
 
-var valkyrie = new Legend(16, "Valkyrie", "Assault", "Valkyrie.png");
+var valkyrie = new Legend(16, "Valkyrie", "Recon", "Valkyrie.png");
 
 var seer = new Legend(17, "Seer", "Recon", "Seer.png");
 
