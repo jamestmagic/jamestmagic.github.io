@@ -85,17 +85,27 @@
   }
 
   img {
-    margin-top: 0px;
-    margin-bottom: 0px;
     margin-right: 150px;
     margin-left: 150px;
   }
 
   figure {
     margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
     display: inline-block;
     font-size: 40px;
     font-family: apexFontBold;
+  }
+
+  figure figcaption {
+    text-align: center;
+    -webkit-text-stroke: 1px white;
+  }
+
+  .size {
+    width: 22rem;
+    height: 22rem;
   }
 
   .header h1 {
@@ -171,7 +181,7 @@
 
 <body id="bg" class="fade-in-image" style="background-position:center;height:100%;background-repeat:no-repeat;background-size:cover;margin:0"></body>
 
-<div class="header">
+<div class="header" style="height:10%">
   <h1>Apex Legends Composition Generator</h1>
 </div>
 
@@ -208,22 +218,21 @@
         </p>
         <p style="background-color:tomato;font-size:40px;font-family:apexFont" id="supportError"></p>
       </form>
-      <div>
-        <img id="legend0Type" />
-        <img id="legend1Type" />
-        <img id="legend2Type" />
-      </div>
-      <div>
-        <figure>
-          <img id="legend0" style="margin:10px">
+
+      <div style="height:50vw">
+        <figure class="size">
+          <img id="legend0Type"/>
+          <img id="legend0" style="height:50%;margin-right:0%;margin-left:0%">
           <figcaption id="legend0Name"></figcaption>
         </figure>
-        <figure>
-          <img id="legend1" style="margin:10px">
+        <figure class="size">
+          <img id="legend1Type"/>
+          <img id="legend1" style="height:50%;margin-right:0%;margin-left:0%">
           <figcaption id="legend1Name"></figcaption>
         </figure>
-        <figure>
-          <img id="legend2" style="margin:10px">
+        <figure class="size">
+          <img id="legend2Type"/>
+          <img id="legend2" style="height:50%;margin-right:0%;margin-left:0%">
           <figcaption id="legend2Name"></figcaption>
         </figure>
       </div>
@@ -231,7 +240,8 @@
     <script type="text/javascript" src="Legend.js"></script>
 </body>
 
-<div class="footer" id="footer">Click "Generate Composition" to generate a random composition &bull; Choose specific classes from the drop down menu to customize your random composition &bull; <b>
+<div class="footer" id="footer">
+  <b>
     <a href="https://github.com/jamestmagic/jamestmagic.github.io">Github</a> &bull; <a
       href="https://www.paypal.com/donate/?business=CBG6Y2H23E4Y6&no_recurring=0&item_name=Trying++my+best+to+create+cool+stuff.+Any+amount+is+much+appreciated%21&currency_code=USD">Donate</a>
   </b>
