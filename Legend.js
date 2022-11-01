@@ -34,7 +34,7 @@ class Legend {
   }
 }
 
-var bgFiles = ["skulltown.png", "fragment.png", "hammond.png"]
+var bgFiles = ["skulltown.png", "fragment.png", "hammond.png", "mill.png", "bionomics.png"]
 var bgFileName = bgFiles[Math.floor(Math.random() * bgFiles.length)];
 document.getElementById("bg").style.backgroundImage = "url(Backgrounds/" + bgFileName + ")";
 
@@ -84,12 +84,14 @@ var newCastle = new Legend(20, "New Castle", "Defensive", "New Castle.png");
 
 var vantage = new Legend(21, "Vantage", "Recon", "Vantage.png");
 
+var catalyst = new Legend(21, "Catalyst", "Defensive", "Catalyst.png");
+
 //Legend Array
 const roster = [bloodhound, gibraltar, lifeline, pathfinder, wraith, bangalore,
   caustic, mirage,
   octane, wattson, crypt0, revenant, loba, rampart, horizon, fuse,
   valkyrie, seer, ash, madMaggie, newCastle,
-  vantage
+  vantage, catalyst
 ];
 
 //Generate Button functionality
