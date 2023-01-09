@@ -1,5 +1,8 @@
 # Apex Legends Composition Generator (ALCG)
 
+Link to app:
+https://jamestmagic.github.io/
+
 This web app is used to generate a random composition legend from Apex Legends based on user-specified parameters for the classes of the legends.
 
 When you enter the app, you can immediately press the "Generate Composition" button or Spacebar(press or hold) to generate a new composition. Above each legend image, you can choose what class of legend from which you want to generate. Ex: Choosing Assault, Defense, and Recon may generate Horizon, Wattson, and Bloodhound.
