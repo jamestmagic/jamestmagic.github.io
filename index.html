@@ -34,10 +34,8 @@
 
   select {
     border: 1px solid black;
-    margin-top: 40px;
+    margin-top: 10px;
     margin-bottom: 0px;
-    margin-right: 90px;
-    margin-left: 90px;
     background-color: rgb(42, 42, 42);
     color: rgb(256, 256, 256);
     font-size: 30px;
@@ -49,13 +47,13 @@
   button {
     border-radius: 10px;
     border: 1px solid black;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 0px;
     margin-right: 70px;
     margin-left: 70px;
     background-color: rgb(42, 42, 42);
     color: rgb(256, 256, 256);
-    font-size: 50px;
+    font-size: 30px;
     text-align: justify;
     font-family: apexFont;
     letter-spacing: 5px;
@@ -94,6 +92,7 @@
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
+    text-align: center;
     display: inline-block;
     font-size: 40px;
     font-family: apexFontBold;
@@ -112,8 +111,8 @@
   .header h1 {
     text-align: center;
     font-family: apexFontHeader;
-    font-size: 50px;
-    letter-spacing: 10px;
+    font-size: 40px;
+    letter-spacing: 5px;
     color: white;
     -webkit-text-stroke: 2px black;
   }
@@ -178,9 +177,25 @@
   body {
     overflow: hidden;
   }
+
+  .column {
+    float: left;
+    width: 33.33%;
+    height: 100vh;
+    text-align: center;
+    outline-width: 3px;
+    background-color: gray;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 </style>
 
-<body id="bg" class="fade-in-image" style="background-position:center;height:100%;background-repeat:no-repeat;background-size:cover;margin:0"></body>
+<body id="bg" class="fade-in-image"
+  style="background-position:center;height:100%;background-repeat:no-repeat;background-size:cover;margin:0"></body>
 
 <div class="header" style="height:10%">
   <h1>Apex Legends Composition Generator</h1>
@@ -190,61 +205,79 @@
   <div>
     <div id="container">
       <button id="generateButton" class="button">Generate Composition</button>
-      <form>
-        <select id="typeList0">
-          <option> Any </option>
-          <option> Assault </option>
-          <option> Defensive </option>
-          <option> Recon </option>
-          <option> Support </option>
-        </select>
-        <select id="typeList1">
-          <option> Any </option>
-          <option> Assault </option>
-          <option> Defensive </option>
-          <option> Recon </option>
-          <option> Support </option>
-        </select>
-        <select id="typeList2">
-          <option> Any </option>
-          <option> Assault </option>
-          <option> Defensive </option>
-          <option> Recon </option>
-          <option> Support </option>
-        </select>
-        <p>
-          <input type="hidden" id="type0">
-          <input type="hidden" id="type1">
-          <input type="hidden" id="type2">
-        </p>
-        <p style="background-color:tomato;font-size:40px;font-family:apexFont" id="supportError"></p>
-      </form>
-
-      <div style="height:50vw">
+    </div>
+    <p style="background-color:tomato;font-size:40px;font-family:apexFont" id="supportError"></p>
+    <div class="row">
+      <div class="column" style="background-color: rgb(204, 102, 0, 0);">
+        <form>
+          <select id="typeList0">
+            <option> Any </option>
+            <option> Assault </option>
+            <option> Defensive </option>
+            <option> Recon </option>
+            <option> Support </option>
+          </select>
+          <p>
+            <input type="hidden" id="type0">
+          </p>
+        </form>
+        <div>
+          <figure class="size">
+            <img id="legend0Type" />
+            <img id="legend0" style="height: 70%;margin-right:0%;margin-left:0%">
+            <figcaption id="legend0Name"></figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="column" style="background-color:rgb(0, 204, 204, 0);">
+        <form>
+          <select id="typeList1">
+            <option> Any </option>
+            <option> Assault </option>
+            <option> Defensive </option>
+            <option> Recon </option>
+            <option> Support </option>
+          </select>
+          <p>
+            <input type="hidden" id="type1">
+          </p>
+        </form>
         <figure class="size">
-          <img id="legend0Type"/>
-          <img id="legend0" style="height:50%;margin-right:0%;margin-left:0%">
-          <figcaption id="legend0Name"></figcaption>
-        </figure>
-        <figure class="size">
-          <img id="legend1Type"/>
-          <img id="legend1" style="height:50%;margin-right:0%;margin-left:0%">
+          <img id="legend1Type" />
+          <img id="legend1" style="height:70%;margin-right:0%;margin-left:0%">
           <figcaption id="legend1Name"></figcaption>
         </figure>
+      </div>
+      <div class="column" style="background-color:rgb(0, 204, 0, 0);">
+        <form>
+          <select id="typeList2">
+            <option> Any </option>
+            <option> Assault </option>
+            <option> Defensive </option>
+            <option> Recon </option>
+            <option> Support </option>
+          </select>
+          <p>
+            <input type="hidden" id="type2">
+          </p>
+        </form>
         <figure class="size">
-          <img id="legend2Type"/>
-          <img id="legend2" style="height:50%;margin-right:0%;margin-left:0%">
+          <img id="legend2Type" />
+          <img id="legend2" style="height:70%;margin-right:0%;margin-left:0%">
           <figcaption id="legend2Name"></figcaption>
         </figure>
       </div>
     </div>
+
+
+
+
     <script type="text/javascript" src="Legend.js"></script>
 </body>
 
 <div class="footer" id="footer">
   <b>
-    <a href="https://github.com/jamestmagic/jamestmagic.github.io">Github</a> &bull; <a
-      href="https://www.paypal.com/donate/?business=CBG6Y2H23E4Y6&no_recurring=0&item_name=Trying++my+best+to+create+cool+stuff.+Any+amount+is+much+appreciated%21&currency_code=USD">Donate</a>
+    <a href="https://github.com/jamestmagic/jamestmagic.github.io">Github</a>
   </b>
 </div>
 
