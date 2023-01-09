@@ -8,5 +8,4 @@ I made this app because I wanted a way for myself and others to have random fun 
 
 This project is open-source so feel free help improve on it and let me know what you think! I had a lot of fun with this project and I hope you do, too. I will be releasing a video about how I made it soon.
 
-Reddit: u/Tengoman
 Website: jamestrandesign.com
