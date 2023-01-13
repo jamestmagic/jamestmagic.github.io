@@ -2,7 +2,6 @@
 
 Link to app:
 https://apexlegends-compgenerator.vercel.app/
-https://jamestmagic.github.io/
 
 This web app is used to generate a random composition legend from Apex Legends based on user-specified parameters for the classes of the legends.
 
