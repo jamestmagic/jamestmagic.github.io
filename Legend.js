@@ -42,23 +42,23 @@ document.getElementById("bg").style.backgroundImage = "url(Backgrounds/" + bgFil
 //All Legends and their atributes
 var bloodhound = new Legend(0, "Bloodhound", "Recon", "Bloodhound.png");
 
-var gibraltar = new Legend(1, "Gibraltar", "Defensive", "Gibraltar.png");
+var gibraltar = new Legend(1, "Gibraltar", "Support", "Gibraltar.png");
 
 var lifeline = new Legend(2, "Lifeline", "Support", "Lifeline.png");
 
-var pathfinder = new Legend(3, "Pathfinder", "Recon", "Pathfinder.png");
+var pathfinder = new Legend(3, "Pathfinder", "Skirmisher", "Pathfinder.png");
 
-var wraith = new Legend(4, "Wraith", "Assault", "Wraith.png");
+var wraith = new Legend(4, "Wraith", "Skirmisher", "Wraith.png");
 
 var bangalore = new Legend(5, "Bangalore", "Assault", "Bangalore.png");
 
-var caustic = new Legend(6, "Caustic", "Defensive", "Caustic.png");
+var caustic = new Legend(6, "Caustic", "Controller", "Caustic.png");
 
-var mirage = new Legend(7, "Mirage", "Assault", "Mirage.png");
+var mirage = new Legend(7, "Mirage", "Skirmisher", "Mirage.png");
 
-var octane = new Legend(8, "Octane", "Assault", "Octane.png");
+var octane = new Legend(8, "Octane", "Skirmisher", "Octane.png");
 
-var wattson = new Legend(9, "Wattson", "Defensive", "Wattson.png");
+var wattson = new Legend(9, "Wattson", "Controller", "Wattson.png");
 
 var crypt0 = new Legend(10, "Crypto", "Recon", "Crypto.png");
 
@@ -66,13 +66,13 @@ var revenant = new Legend(11, "Revenant", "Assault", "Revenant.png");
 
 var loba = new Legend(12, "Loba", "Support", "Loba.png");
 
-var rampart = new Legend(13, "Rampart", "Defensive", "Rampart.png");
+var rampart = new Legend(13, "Rampart", "Controller", "Rampart.png");
 
-var horizon = new Legend(14, "Horizon", "Assault", "Horizon.png");
+var horizon = new Legend(14, "Horizon", "Skirmisher", "Horizon.png");
 
 var fuse = new Legend(15, "Fuse", "Assault", "Fuse.png");
 
-var valkyrie = new Legend(16, "Valkyrie", "Recon", "Valkyrie.png");
+var valkyrie = new Legend(16, "Valkyrie", "Skirmisher", "Valkyrie.png");
 
 var seer = new Legend(17, "Seer", "Recon", "Seer.png");
 
@@ -80,11 +80,11 @@ var ash = new Legend(18, "Ash", "Assault", "Ash.png");
 
 var madMaggie = new Legend(19, "Mad Maggie", "Assault", "Mad Maggie.png");
 
-var newCastle = new Legend(20, "New Castle", "Defensive", "New Castle.png");
+var newCastle = new Legend(20, "New Castle", "Support", "New Castle.png");
 
 var vantage = new Legend(21, "Vantage", "Recon", "Vantage.png");
 
-var catalyst = new Legend(21, "Catalyst", "Defensive", "Catalyst.png");
+var catalyst = new Legend(21, "Catalyst", "Controller", "Catalyst.png");
 
 //Legend Array
 const roster = [bloodhound, gibraltar, lifeline, pathfinder, wraith, bangalore,
@@ -135,19 +135,6 @@ function shuffle(type0, type1, type2) {
   document.getElementById("type2").value = typeList2.options[typeList2
     .selectedIndex].text;
 
-  /*If the user has selected support for all 3 types, show a warning
-    Last legend type will default to "Any"
-    This code will be deleted once Respawn adds another Support Legend
-    */
-  if (document.getElementById("type2").value == "Support" && document
-    .getElementById("type1").value == "Support" && document.getElementById(
-      "type0").value == "Support") {
-    document.getElementById("type2").value = "Any";
-    document.getElementById("supportError").innerHTML =
-      "Cannot have 3 Support Legends. Please choose another type.";
-  } else {
-    document.getElementById("supportError").innerHTML = "";
-  }
 
   //determines which types will be used for each Legend slot
   type0 = document.getElementById("type0").value;
