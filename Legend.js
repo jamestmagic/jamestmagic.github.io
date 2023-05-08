@@ -54,7 +54,7 @@ var bangalore = new Legend(5, "Bangalore", "Assault", "Bangalore.png");
 
 var caustic = new Legend(6, "Caustic", "Controller", "Caustic.png");
 
-var mirage = new Legend(7, "Mirage", "Skirmisher", "Mirage.png");
+var mirage = new Legend(7, "Mirage", "Support", "Mirage.png");
 
 var octane = new Legend(8, "Octane", "Skirmisher", "Octane.png");
 
@@ -86,12 +86,14 @@ var vantage = new Legend(21, "Vantage", "Recon", "Vantage.png");
 
 var catalyst = new Legend(21, "Catalyst", "Controller", "Catalyst.png");
 
+var ballistic = new Legend(22, "Ballistic", "Assault", "Ballistic.png");
+
 //Legend Array
 const roster = [bloodhound, gibraltar, lifeline, pathfinder, wraith, bangalore,
   caustic, mirage,
   octane, wattson, crypt0, revenant, loba, rampart, horizon, fuse,
   valkyrie, seer, ash, madMaggie, newCastle,
-  vantage, catalyst
+  vantage, catalyst, ballistic
 ];
 
 //Generate Button functionality
