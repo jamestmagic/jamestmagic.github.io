@@ -149,6 +149,7 @@ function shuffle(type0, type1, type2) {
   //new array for the randomized legends
   var randomLegends = [roster[0], roster[1], roster[2]];
 
+  
 
   //Legend 1
   for (let i = 0; i < roster.length; i++) {
