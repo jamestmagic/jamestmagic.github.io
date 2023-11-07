@@ -88,12 +88,14 @@ var catalyst = new Legend(21, "Catalyst", "Controller", "Catalyst.png");
 
 var ballistic = new Legend(22, "Ballistic", "Assault", "Ballistic.png");
 
+var conduit = new Legend(22, "Conduit", "Support", "Conduit.png");
+
 //Legend Array
 const roster = [bloodhound, gibraltar, lifeline, pathfinder, wraith, bangalore,
   caustic, mirage,
   octane, wattson, crypt0, revenant, loba, rampart, horizon, fuse,
   valkyrie, seer, ash, madMaggie, newCastle,
-  vantage, catalyst, ballistic
+  vantage, catalyst, ballistic, conduit
 ];
 
 //Generate Button functionality
